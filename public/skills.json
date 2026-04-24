@@ -1,0 +1,53 @@
+[
+    {
+        "image": "/tech/Bootstrap.svg"
+    },
+    {
+        "image": "/tech/CSS3.svg"
+    },
+    {
+        "image": "/tech/Express.svg"
+    },
+    {
+        "image": "/tech/Firebase.svg"
+    },
+    {
+        "image": "/tech/GitHub.svg"
+    },
+    {
+        "image": "/tech/HTML5.svg"
+    },
+    {
+        "image": "/tech/JavaScript.svg"
+    },
+    {
+        "image": "/tech/jQuery.svg"
+    },
+    {
+        "image": "/tech/MongoDB.svg"
+    },
+    {
+        "image": "/tech/MySQL.svg"
+    },
+    {
+        "image": "/tech/Next.js.svg"
+    },
+    {
+        "image": "/tech/Node.js.svg"
+    },
+    {
+        "image": "/tech/React.svg"
+    },
+    {
+        "image": "/tech/Sass.svg"
+    },
+    {
+        "image": "/tech/Tailwind.svg"
+    },
+    {
+        "image": "/tech/TypeScript.svg"
+    },
+    {
+        "image": "/tech/Vite.js.svg"
+    }
+]

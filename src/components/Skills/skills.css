@@ -1,0 +1,31 @@
+.skills-slider-box {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 75px;
+}
+
+.skills-slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 20s linear infinite;
+}
+
+.skill-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.skill-item img {
+  width: 50px;
+  height: auto;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

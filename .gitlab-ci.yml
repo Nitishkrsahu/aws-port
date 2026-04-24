@@ -1,7 +1,30 @@
-before_script:
-  - apt-get update -y
-  - apt-get install -y openssh-client
-  - mkdir -p ~/.ssh
-  - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-  - chmod 600 ~/.ssh/id_rsa
-  - ssh-keyscan -H $EC2_IP >> ~/.ssh/known_hosts
+stages:
+  - build
+  - deploy
+
+build_job:
+  stage: build
+  image: node:20
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy_job:
+  stage: deploy
+  image: ubuntu:latest
+  before_script:
+    - apt-get update -y
+    - apt-get install -y openssh-client
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H $EC2_IP >> ~/.ssh/known_hosts
+
+  script:
+    - scp -r dist/* ubuntu@$EC2_IP:/var/www/html/
+
+  only:
+    - main

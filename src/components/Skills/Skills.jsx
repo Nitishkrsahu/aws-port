@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import './Skills.css';
+import './skills.css';
 
 const Skills = () => {
   const [skill, setSkill] = useState([]);
